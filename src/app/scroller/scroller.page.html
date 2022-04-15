@@ -1,0 +1,142 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Scroller</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" [scrollY]="true">
+  <cdk-virtual-scroll-viewport itemSize="50" class="ion-content-scroll-host">
+    <!-- <ion-item *cdkVirtualFor="let item of items">
+      {{ item }}
+    </ion-item> -->
+    <ion-infinite-scroll threshold="100px">
+      <ion-infinite-scroll-content>
+
+<!-- Default Label -->
+<ion-label>Label</ion-label>
+
+<!-- Label Colors -->
+<ion-label color="primary">Primary Label</ion-label>
+<ion-label color="secondary">Secondary Label</ion-label>
+<ion-label color="danger">Danger Label</ion-label>
+<ion-label color="light">Light Label</ion-label>
+<ion-label color="dark">Dark Label</ion-label>
+
+<!-- Item Labels -->
+<ion-item>
+  <ion-label>Default Item</ion-label>
+</ion-item>
+
+<ion-item>
+  <ion-label class="ion-text-wrap">
+    Multi-line text that should wrap when it is too long
+    to fit on one line in the item.
+  </ion-label>
+</ion-item>
+
+<!-- Input Labels -->
+<ion-item>
+  <ion-label>Default Input</ion-label>
+  <ion-input></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="fixed">Fixed</ion-label>
+  <ion-input></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="floating">Floating</ion-label>
+  <ion-input></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label position="stacked">Stacked</ion-label>
+  <ion-input></ion-input>
+</ion-item>
+
+<ion-item>
+  <ion-label>Toggle</ion-label>
+  <ion-toggle slot="end" checked></ion-toggle>
+</ion-item>
+
+<ion-item>
+  <ion-checkbox slot="start" checked></ion-checkbox>
+  <ion-label>Checkbox</ion-label>
+</ion-item>
+
+        <ion-label class="ion-text-wrap">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br>
+        </ion-label>
+        <ion-label >
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.<br>
+        </ion-label>
+
+
+        <ion-item-divider>
+          <ion-label>
+            Basic Item Divider
+          </ion-label>
+        </ion-item-divider>
+
+        <ion-item-divider color="secondary">
+          <ion-label>
+            Secondary Item Divider
+          </ion-label>
+        </ion-item-divider>
+
+        <!-- Item Dividers in a List -->
+        <ion-list>
+          <ion-item-divider>
+            <ion-label>
+              Section A
+            </ion-label>
+          </ion-item-divider>
+
+          <ion-item><ion-label>A1</ion-label></ion-item>
+          <ion-item><ion-label>A2</ion-label></ion-item>
+          <ion-item><ion-label>A3</ion-label></ion-item>
+          <ion-item><ion-label>A4</ion-label></ion-item>
+          <ion-item><ion-label>A5</ion-label></ion-item>
+
+          <ion-item-divider>
+            <ion-label>
+              Section B
+            </ion-label>
+          </ion-item-divider>
+
+          <ion-item><ion-label>B1</ion-label></ion-item>
+          <ion-item><ion-label>B2</ion-label></ion-item>
+          <ion-item><ion-label>B3</ion-label></ion-item>
+          <ion-item><ion-label>B4</ion-label></ion-item>
+          <ion-item><ion-label>B5</ion-label></ion-item>
+        </ion-list>
+
+
+        <div class="ion-activatable ripple-parent">
+          A plain div with a bounded ripple effect
+          <ion-ripple-effect></ion-ripple-effect>
+        </div>
+
+        <button class="ion-activatable ripple-parent">
+          A button with a bounded ripple effect
+          <ion-ripple-effect></ion-ripple-effect>
+        </button>
+
+        <div class="ion-activatable ripple-parent">
+          A plain div with an unbounded ripple effect
+          <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+        </div>
+
+        <button class="ion-activatable ripple-parent">
+          A button with an unbounded ripple effect
+          <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+        </button>
+
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+  </cdk-virtual-scroll-viewport>
+</ion-content>

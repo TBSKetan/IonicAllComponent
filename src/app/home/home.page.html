@@ -1,20 +1,46 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title> List of Component </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <!-- Next page open method 1 -->
+  <!-- <ion-button  [routerLink]="['/buttons']" expand="block">Button Click</ion-button>
+  <ion-button  [routerLink]="['/scroller']" expand="block">Scroll Click</ion-button> -->
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <!-- Next page open method 2 -->
+  <ion-button hidden (click)="onButtonClick(1)" expand="block">Button Component</ion-button>
+  <ion-button hidden (click)="onButtonClick(2)" expand="block">Mix Component</ion-button>
+
+  <!-- Next page open method 3 -->
+  <ion-button hidden (click)="onButtonComponentClick()" expand="block">Button Component</ion-button>
+  <ion-button hidden (click)="onMixButtonClick()" expand="block">Mix Component</ion-button>
+
+  <!-- List of Text Items -->
+  <ion-list>
+    <ion-item (click)="onButtonClick(1)"> {{stringListComponent.btnComponent}}</ion-item>
+    <ion-item (click)="onButtonClick(2)"> {{stringListComponent.btnMixComponent}} </ion-item>
+    <ion-item (click)="onButtonClick(3)"> {{stringListComponent.btnListComponent}} </ion-item>
+    <ion-item (click)="onButtonClick(4)"> {{stringListComponent.btnAlertComponent}} </ion-item>
+    <ion-item (click)="onButtonClick(5)"> {{stringListComponent.btnActionSheetComponent}} </ion-item>
+    <ion-item (click)="onButtonClick(6)"> {{stringListComponent.btnCardComponent}} </ion-item>
+    <ion-item (click)="onButtonClick(7)"> {{stringListComponent.btnCheckBoxComponent}} </ion-item>
+    <ion-item (click)="onButtonClick(8)"> {{stringListComponent.btnRadioComponent}} </ion-item>
+    <ion-item (click)="onButtonClick(9)"> {{stringListComponent.btnChipComponent}} </ion-item>
+    <ion-item (click)="onButtonClick(10)"> {{stringListComponent.btnContentComponent}} </ion-item>
+    <ion-item (click)="onButtonClick(11)"> {{stringListComponent.btnDataTimeComponent}} </ion-item>
+    <ion-item (click)="onButtonClick(12)"> {{stringListComponent.btnFloatingComponent}} </ion-item>
+    <ion-item (click)="onButtonClick(13)"> {{stringListComponent.btnModalComponent}} </ion-item>
+    <ion-item (click)="onButtonClick(14)"> {{stringListComponent.btnMenuComponent}} </ion-item>
+    <ion-item (click)="onButtonClick(15)"> {{stringListComponent.btnPopoverComponent}} </ion-item>
+    <ion-item (click)="onButtonClick(16)"> {{stringListComponent.btnRefresherComponent}} </ion-item>
+    <ion-item (click)="onButtonClick(17)"> {{stringListComponent.btnProgressIndicatorComponent}} </ion-item>
+    <ion-item (click)="onButtonClick(18)"> {{stringListComponent.btnSegmentComponent}} </ion-item>
+    <ion-item (click)="onButtonClick(19)"> {{stringListComponent.btnSlideComponent}} </ion-item>
+    <ion-item (click)="onButtonClick(20)"> {{stringListComponent.btnToastComponent}} </ion-item>
+    <ion-item (click)="onButtonClick(21)"> {{stringListComponent.btnToggleComponent}} </ion-item>
+    <ion-item (click)="onButtonClick(22)"> {{stringListComponent.btnToolbarComponent}} </ion-item>
+  </ion-list>
+
 </ion-content>
