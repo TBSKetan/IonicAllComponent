@@ -1,9 +1,42 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>radio</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{stringConstant.labelRadio}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-list>
+    <!-- allow-empty-selection = “true” this is for select unselect radio button -->
+    <ion-radio-group value="gender" (ionChange)="radioGroupChange($event)">
+      <ion-list-header>
+        <ion-label> {{stringConstant.labelRadio}} </ion-label>
+      </ion-list-header>
 
+      <ion-item>
+        <ion-label>{{stringConstant.labelMale}}</ion-label>
+        <ion-radio color="primary" slot="start" value="male" ></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>{{stringConstant.labelFemale}}</ion-label>
+        <ion-radio color="secondary" slot="start" value="female"></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>{{stringConstant.labelOther}}</ion-label>
+        <ion-radio  color="success" slot="start" value="other"></ion-radio>
+      </ion-item>
+    </ion-radio-group>
+  </ion-list>
+
+   <!-- Checkboxes in a List -->
+  <ion-list>
+    <ion-item *ngFor="let entry of form">
+      <ion-label>{{entry.val}}</ion-label>
+      <ion-radio slot="end" [(ngModel)]="entry.isChecked"></ion-radio>
+    </ion-item>
+  </ion-list>
 </ion-content>

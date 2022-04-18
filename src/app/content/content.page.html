@@ -1,9 +1,26 @@
-<ion-header>
+<ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>content</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Content</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content
+  [scrollEvents]="true"
+  (ionScrollStart)="logScrollStart($event)"
+  (ionScroll)="logScrolling($event)"
+  (ionScrollEnd)="logScrollEnd($event)"
+>
+  <ion-button (click)="scrollToBottom()">Scroll Bottom</ion-button>
+  <ion-button (click)="scrollToPoint(300, 120)">Scroll To Point Left</ion-button>
 
+  <ion-list>
+    <ion-item *ngFor="let item of dummyList">
+      <ion-label>{{item.value}}</ion-label>
+    </ion-item>
+  </ion-list>
+  <ion-button (click)="scrollToPoint(-300, -120)"> Scroll To Point Right </ion-button>
+  <ion-button (click)="scrollToTop()">Scroll To Top</ion-button>
 </ion-content>

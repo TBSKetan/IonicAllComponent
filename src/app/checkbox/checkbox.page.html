@@ -1,9 +1,69 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>checkbox</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Checkbox</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-list>
+    <ion-item>
+      <!-- Default Checkbox -->
+      <ion-checkbox></ion-checkbox>
+    </ion-item>
+  </ion-list>
 
+  <ion-item>
+    <!-- Disabled Checkbox -->
+    <ion-checkbox disabled="true"></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <!-- Checked Checkbox -->
+    <ion-checkbox checked="true"></ion-checkbox>
+  </ion-item>
+
+  <ion-item >
+    <!-- Checkbox Colors -->
+    <label>Checkbox Color</label>
+    <ion-checkbox color="primary"></ion-checkbox>
+    <ion-checkbox color="secondary"></ion-checkbox>
+    <ion-checkbox color="danger"></ion-checkbox>
+    <ion-checkbox color="light"></ion-checkbox>
+    <ion-checkbox color="dark"></ion-checkbox>
+  </ion-item>
+
+  <ion-item>
+    <ion-checkbox name="agree" value="agree" (ionChange)="onCheckSingle($event)"></ion-checkbox>
+    <ion-text class="ion-padding">I'm agreeing to something</ion-text>
+  </ion-item>
+
+
+  <div *ngIf="testList.length > 0">
+    <ion-item *ngFor="let member of testList">
+      <ion-label>{{member?.testName || 'N/A'}}</ion-label>
+      <ion-checkbox color="primary" (click)="selectCheckBox(member)" [(ngModel)] ="member.checked"></ion-checkbox>
+    </ion-item>
+  </div>
+  <ion-button (click)="checkAll()">SelectAll</ion-button>
+
+
+  <ion-list>
+    <ion-item *ngFor="let option of question.options">
+       <ion-label>{{option}}</ion-label>
+       <ion-checkbox color="success" value="option" (click)="onChange(option)" name="option"></ion-checkbox>
+    </ion-item>
+ </ion-list>
+
+  <ion-button  [disabled]="checkedItems.length <1 ">Save </ion-button >
+
+  <!-- Checkboxes in a List -->
+  <ion-list>
+    <ion-item *ngFor="let entry of form">
+      <ion-label>{{entry.val}}</ion-label>
+      <ion-checkbox slot="end" [(ngModel)]="entry.isChecked"></ion-checkbox>
+    </ion-item>
+  </ion-list>
 </ion-content>

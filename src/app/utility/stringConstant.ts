@@ -22,5 +22,17 @@ export const CONSTANT = {
   btnToastComponent: 'Toast',
   btnToggleComponent: 'Toggle',
   btnToolbarComponent: 'Toolbar',
+  labelRadio: 'Radio',
+  labelMale:'Male',
+  labelFemale:'Female',
+  labelOther:'Other',
+
+  registrationPage: {
+    registration: 'Registration',
+    registrationFirstName: 'First name',
+    registrationLastName: 'Last name',
+    registrationEmail: 'Email',
+    registrationPassword: 'Password',
+  }
 };
 
