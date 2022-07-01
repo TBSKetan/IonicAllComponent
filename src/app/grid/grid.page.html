@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" >
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Grid</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row class="ion-padding">
+      <ion-col style="background-color: red; color: black;"> Signal 1</ion-col>
+      <ion-col style="background-color: green; color: black"> Signal 2</ion-col>
+      <ion-col style="background-color: yellow; color: black">Signal 3</ion-col>
+    </ion-row>
+
+    <ion-label class="ion-padding">Custom Size</ion-label>
+
+    <ion-row class="ion-padding">
+      <ion-col style="background: aqua; color: black;" size="6"> Signal 1</ion-col>
+      <ion-col style="background: burlywood; color: black" size="3"> Signal 2</ion-col>
+      <ion-col style="background: darkgray; color: black" size="3">Signal 3</ion-col>
+    </ion-row>
+
+    <ion-label class="ion-padding">Images</ion-label>
+    <ion-row class="ion-padding">
+      <ion-col size="6" style="padding: 0;">
+        <img src="./assets/images/1.jpg">
+      </ion-col>
+      <ion-col size="6"  style="padding: 0;">
+        <img src="./assets/images/2.jpg">
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col  style="padding: 0;">
+        <img src="./assets/images/3.jpg">
+      </ion-col>
+      <ion-col size="3" size-lg>
+        <img src="https://i.pravatar.cc/150?img=5">
+      </ion-col>
+      <ion-col>
+        <img src="https://i.pravatar.cc/150?img=2" class="logo">
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col class="toolbox"><ion-icon name="bag-remove-outline"></ion-icon></ion-col>
+      <ion-col class="toolbox"><ion-icon name="american-football-outline"></ion-icon></ion-col>
+      <ion-col class="toolbox"><ion-icon name="book-outline"></ion-icon></ion-col>
+      <ion-col class="toolbox"><ion-icon name="camera-outline"></ion-icon></ion-col>
+      <ion-col class="toolbox"><ion-icon name="cart-outline"></ion-icon></ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <div id="container">
+<img src="./assets/images/3.jpg" class="logo">
+
+
+  </div>
+
+</ion-content>

@@ -79,6 +79,15 @@ export class HomePage {
       case 22:
         this.router.navigate(['/toolbar']);
         break;
+      case 23:
+        this.router.navigate(['/header']);
+        break;
+      case 24:
+        this.router.navigate(['/grid']);
+        break;
+        case 25:
+          this.router.navigate(['/ion-select-option']);
+          break;
     }
   }
 

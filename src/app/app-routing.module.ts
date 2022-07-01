@@ -119,6 +119,18 @@ const routes: Routes = [
     path: 'menu',
     loadChildren: () => import('./menu/menu.module').then( m => m.MenuPageModule)
   },
+  {
+    path: 'header',
+    loadChildren: () => import('./header/header.module').then( m => m.HeaderPageModule)
+  },
+  {
+    path: 'grid',
+    loadChildren: () => import('./grid/grid.module').then( m => m.GridPageModule)
+  },
+  {
+    path: 'ion-select-option',
+    loadChildren: () => import('./ion-select-option/ion-select-option.module').then( m => m.IonSelectOptionPageModule)
+  },
 ];
 
 @NgModule({
